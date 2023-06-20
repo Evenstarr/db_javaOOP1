@@ -1,6 +1,8 @@
 package lesson4;
 
 import java.time.LocalDate;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.TreeSet;
 
 public class Main {
@@ -29,5 +31,20 @@ public class Main {
         teacherTreeSet.add(Sidorov);
 
         System.out.println(teacherTreeSet);
+
+        LinkedList<Teacher> tl = new LinkedList<>();
+        tl.add(Ivanov);
+        tl.add(Petrov);
+        tl.add(Sidorov);
+
+        TeacherGroup tg = new TeacherGroup();
+        tg.setTeachers(tl);
+
+        System.out.println(tg);
+
+        for (var teacher: tg) {
+            System.out.println(teacher);
+        }
     }
 }
+
